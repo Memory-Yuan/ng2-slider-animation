@@ -1,0 +1,10 @@
+<div class="container">
+	<div class="trigger" (panstart)="handlePan($event)" (pan)="handlePan($event)">
+		<div class="content"></div>
+		<div #slider class="slider-box"
+			[ngStyle]="{'transform': sliderStyle.transform, 'transition': sliderStyle.transition, 'opacity': sliderStyle.opacity, 'z-index': sliderStyle.zIndex}">
+			<div *ngFor="let i of [1, 2, 3]" class="table t{{i}}">{{i}}</div>
+		</div>
+	</div>
+
+</div>
